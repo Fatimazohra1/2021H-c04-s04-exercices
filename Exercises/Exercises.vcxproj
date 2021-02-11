@@ -150,12 +150,14 @@
     <ClCompile Include="Company.cpp" />
     <ClCompile Include="Department.cpp" />
     <ClCompile Include="Employee.cpp" />
+    <ClCompile Include="Fraction.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Company.hpp" />
     <ClInclude Include="Department.hpp" />
     <ClInclude Include="Employee.hpp" />
+    <ClInclude Include="Fraction.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="CMakeLists.txt" />

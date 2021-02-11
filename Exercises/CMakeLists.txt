@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.0.0)
 set(CMAKE_TOOLCHAIN_FILE "$ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake")
 
 # Le nom du projet.
-project(Exercices)
+project(Exercises)
 
 # On met les fichiers sources (incluant les entêtes)
 set(ALL_FILES
@@ -13,7 +13,9 @@ set(ALL_FILES
     "Company.hpp"
     "Company.cpp"
     "Department.hpp"
-    "Department.cpp")
+    "Department.cpp"
+    "Fraction.hpp"
+    "Fraction.cpp")
 
 add_executable(${PROJECT_NAME} ${ALL_FILES})
 

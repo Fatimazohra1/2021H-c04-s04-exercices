@@ -19,6 +19,7 @@
 #include <cppitertools/zip.hpp>
 
 #include "Company.hpp"
+#include "Fraction.hpp"
 
 using namespace std;
 using namespace iter;
@@ -75,10 +76,30 @@ void runCompanyExample() {
 	cout << "- - - - - - - - - - -" << "\n";
 }
 
+void runFractionExample() {
+	Fraction foo(42, -4);
+	Fraction bar = 10;
+	Fraction qux = bar;
+	qux += -5;
+	qux += bar += Fraction(1, 2);
+
+	cout << "foo        = " << foo << "\n"
+	     << "bar        = " << bar << "\n"
+	     << "qux        = " << qux << "\n"
+	     << "-foo       = " << -foo << "\n"
+	     << "foo + bar  = " << (foo + bar) << "\n"
+	     << "foo + -bar = " << (foo + -bar) << "\n"
+	     << "bar        = " << bar << "\n"
+	     << "bar++      = " << bar++ << "\n"
+	     << "bar        = " << bar << "\n"
+	     << "++bar      = " << ++bar << "\n";
+}
 
 int main() {
 	runPointersExample();
 	cout << "\n\n\n";
 	runCompanyExample();
+	cout << "\n\n\n";
+	runFractionExample();
 }
 
