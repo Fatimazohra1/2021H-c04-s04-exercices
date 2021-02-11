@@ -15,7 +15,9 @@ set(ALL_FILES
     "Department.hpp"
     "Department.cpp"
     "Fraction.hpp"
-    "Fraction.cpp")
+    "Fraction.cpp"
+    "Vector.hpp"
+    "Vector.cpp")
 
 add_executable(${PROJECT_NAME} ${ALL_FILES})
 

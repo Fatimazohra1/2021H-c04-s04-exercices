@@ -9,6 +9,7 @@
 #include <memory>
 #include <utility>
 #include <iostream>
+#include <span>
 
 #include <cppitertools/itertools.hpp>
 

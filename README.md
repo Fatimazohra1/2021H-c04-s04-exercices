@@ -1,11 +1,16 @@
-# Classes, constructeurs, destructeurs (semaine 3)
+# Pointeurs intelligents, opérateurs, copie (semaine 4)
 
-## Fichiers `Employee.*` et `Company.*`
+## Fichiers `Employee.*`, `Company.*` et `Department.*`
 
-Ce sont les exemples des slides, mais écrits différemment et un peu plus élaborés.
+Exemple de la dernière fois, mais en utilisant des vecteurs et des pointeurs intelligents avec un mélange d'aggrégation et de composition.
 
-On fait ensemble les implémentations des méthodes durant le cours comme exercices.
+## Fichiers `Fraction.*`
 
-## Fichiers `tuples.*`
+Exemple des slides sur la surcharge d'opérateurs, mais avec plus d'opérateurs surchargés.
 
-Exemples sur les tuples.
+Les opérateurs de soustraction, de multiplication et de division sont un bon exercice à faire à la maison.
+
+## Fichiers `Vector.*`
+
+Exemple des slides sur la copie d'objet (dernière version avec les *move*). La classe est plus complète que dans les slides et inclue un opérateur d'indice (`operator[]`).
+

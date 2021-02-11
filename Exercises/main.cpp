@@ -55,6 +55,11 @@ void runPointersExample() {
 	     << "bar: " << bar.get() << ", " << bar->getM() << "\n"
 	     << "qux: " << qux.get() << ", " << qux->getM() << "\n";
 
+	auto eggs = make_unique<Spam[]>(4);
+	cout << "eggs: " << eggs.get() << "\n";
+	eggs.reset();
+	cout << "eggs: " << eggs.get() << "\n";
+
 	cout << "- - - - - - - - - - -" << "\n";
 }
 
