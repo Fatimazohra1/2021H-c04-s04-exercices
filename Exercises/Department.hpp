@@ -17,9 +17,16 @@ using namespace std;
 
 
 class Department {
+public:
+	Department(const string& name);
 
+	const string& getName() const;
+	int getNumEmployees() const;
+
+	void addEmployee(Employee* employee);
 
 private:
-	vector<Employee*>
+	string name_;
+	vector<Employee*> employees_;
 };
 

@@ -148,15 +148,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Company.cpp" />
+    <ClCompile Include="Department.cpp" />
     <ClCompile Include="Employee.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="tuples.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Company.hpp" />
     <ClInclude Include="Department.hpp" />
     <ClInclude Include="Employee.hpp" />
-    <ClInclude Include="tuples.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="CMakeLists.txt" />

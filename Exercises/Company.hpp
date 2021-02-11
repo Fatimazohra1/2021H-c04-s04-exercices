@@ -1,5 +1,5 @@
 ///
-/// Une compagnie avec des employés.
+/// Une compagnie avec des employés et des départements.
 ///
 
 #pragma once
@@ -9,8 +9,11 @@
 #include <cstdint>
 
 #include <string>
+#include <vector>
+#include <memory>
 
 #include "Employee.hpp"
+#include "Department.hpp"
 
 using namespace std;
 
@@ -28,12 +31,17 @@ public:
 	Employee& getPresident();
 	int getNumEmployees() const;
 
+	Employee* getEmployee(const string& name);
+	Department* getDepartment(const string& name);
 	void addEmployee(const string& name, double salary);
+	void addEmployee(unique_ptr<Employee> employee);
+	void addDepartment(const string& name);
+	void addEmployeeToDepartment(const string& employee, const string& department);
 	void print() const;
 
 private:
 	string name_ = "Unnamed";
 	Employee president_;
-	Employee* employees_[numEmployeesMax] = {};
-	int numEmployees_ = 0;
+	vector<unique_ptr<Employee>> employees_;
+	vector<unique_ptr<Department>> departments_;
 };

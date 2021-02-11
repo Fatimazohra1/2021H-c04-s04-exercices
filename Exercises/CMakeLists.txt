@@ -12,8 +12,8 @@ set(ALL_FILES
     "Employee.cpp"
     "Company.hpp"
     "Company.cpp"
-    "tuples.hpp"
-    "tuples.cpp")
+    "Department.hpp"
+    "Department.cpp")
 
 add_executable(${PROJECT_NAME} ${ALL_FILES})
 

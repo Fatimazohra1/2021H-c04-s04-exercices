@@ -15,7 +15,7 @@ using namespace std;
 
 class Employee {
 public:
-	//Employee(); // Si on n'en met pas un, le compilateur n'en met pas un pour nous.
+	Employee();
 	Employee(const string& name, double salary = 0.0);
 	~Employee();
 
@@ -24,7 +24,7 @@ public:
 	void setSalary(double salary);
 
 private:
-	string name_;
-	double salary_;
+	string name_ = "N/A";
+	double salary_ = 42.0;
 };
 
