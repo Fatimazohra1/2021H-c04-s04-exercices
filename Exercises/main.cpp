@@ -25,7 +25,35 @@ using namespace iter;
 
 
 void runPointersExample() {
-	
+	class Spam {
+	public:
+		Spam() { cout << "Spam()" << "\n"; }
+		Spam(int m) : m_(m) { cout << "Spam(int)" << "\n"; }
+		~Spam() { cout << "~Spam() : " << m_ << "\n"; }
+
+		int getM() const { return m_; }
+
+	private:
+		int m_ = 0;
+	};
+
+	auto foo = make_unique<Spam>();
+	auto bar = make_unique<Spam>(42);
+	unique_ptr<Spam> qux;
+	cout << "foo: " << foo.get() << ", " << foo->getM() << "\n"
+	     << "bar: " << bar.get() << ", " << bar->getM() << "\n"
+	     << "qux: " << qux.get() << "\n";
+	foo.reset();
+	qux = move(bar);
+	cout << "foo: " << foo.get() << "\n"
+	     << "bar: " << bar.get() << "\n"
+	     << "qux: " << qux.get() << ", " << qux->getM() << "\n";
+	bar = make_unique<Spam>(0xDEADBEEF);
+	cout << "foo: " << foo.get() << "\n"
+	     << "bar: " << bar.get() << ", " << bar->getM() << "\n"
+	     << "qux: " << qux.get() << ", " << qux->getM() << "\n";
+
+	cout << "- - - - - - - - - - -" << "\n";
 }
 
 void runCompanyExample() {
@@ -49,7 +77,8 @@ void runCompanyExample() {
 
 
 int main() {
+	runPointersExample();
+	cout << "\n\n\n";
 	runCompanyExample();
-	cout << "\n\n";
 }
 
