@@ -158,6 +158,7 @@
     <ClInclude Include="Department.hpp" />
     <ClInclude Include="Employee.hpp" />
     <ClInclude Include="Fraction.hpp" />
+    <ClInclude Include="Vector.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="CMakeLists.txt" />

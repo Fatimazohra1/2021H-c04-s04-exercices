@@ -20,6 +20,7 @@
 
 #include "Company.hpp"
 #include "Fraction.hpp"
+#include "Vector.hpp"
 
 using namespace std;
 using namespace iter;
@@ -95,11 +96,25 @@ void runFractionExample() {
 	     << "++bar      = " << ++bar << "\n";
 }
 
+void runVectorExample() {
+	int values[8] = {1, 2, 3, 4, 5, 6, 7, 8};
+	Vector foo(span(values, 8));
+	Vector bar = foo;
+	cout << "foo: " << foo.getData() << ", " << foo << "\n";
+	cout << "bar: " << bar.getData() << ", " << bar << "\n";
+	Vector qux = move(bar);
+	cout << "bar: " << bar.getData() << ", " << bar << "\n";
+	cout << "qux: " << qux.getData() << ", " << qux << "\n";
+}
+
+
 int main() {
 	runPointersExample();
 	cout << "\n\n\n";
 	runCompanyExample();
 	cout << "\n\n\n";
 	runFractionExample();
+	cout << "\n\n\n";
+	runVectorExample();
 }
 
