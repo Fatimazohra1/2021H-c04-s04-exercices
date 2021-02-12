@@ -8,9 +8,11 @@ Exemple de la dernière fois, mais en utilisant des vecteurs et des pointeurs in
 
 Exemple des slides sur la surcharge d'opérateurs, mais avec plus d'opérateurs surchargés.
 
-Les opérateurs de soustraction, de multiplication et de division sont un bon exercice à faire à la maison.
+Les opérateurs de soustraction, de multiplication, de division et de comparaison sont un bon exercice à faire à la maison.
 
 ## Fichiers `Vector.*`
 
 Exemple des slides sur la copie d'objet (dernière version avec les *move*). La classe est plus complète que dans les slides et inclue un opérateur d'indice (`operator[]`).
+
+Exercice à la maison : Changer la gestion manuelle de ressource par l'utilisation de `unique_ptr`.
 
