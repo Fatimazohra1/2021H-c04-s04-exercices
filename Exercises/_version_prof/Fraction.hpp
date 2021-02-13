@@ -39,6 +39,13 @@ public:
 	Fraction operator/(const Fraction& rhs) const;
 	Fraction operator/(int rhs) const;
 
+	bool operator==(const Fraction& rhs) const;
+	bool operator!=(const Fraction& rhs) const;
+	bool operator<(const Fraction& rhs) const;
+	bool operator<=(const Fraction& rhs) const;
+	bool operator>(const Fraction& rhs) const;
+	bool operator>=(const Fraction& rhs) const;
+
 	Fraction& operator+=(const Fraction& rhs);
 	Fraction& operator+=(int rhs);
 	Fraction& operator-=(const Fraction& rhs);

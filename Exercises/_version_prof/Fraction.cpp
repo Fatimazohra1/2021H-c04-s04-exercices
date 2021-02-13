@@ -104,6 +104,34 @@ Fraction Fraction::operator/(int rhs) const {
 	return {numer_, denom_ * rhs};
 }
 
+bool Fraction::operator==(const Fraction& rhs) const {
+	// On assume que les fractions sont toujours simplifiées.
+	return numer_ == rhs.numer_ and denom_ == rhs.denom_;
+}
+
+bool Fraction::operator!=(const Fraction& rhs) const {
+	// On réutilise l'égalité
+	return not (*this == rhs);
+}
+
+bool Fraction::operator<(const Fraction& rhs) const {
+	// Math is hard!
+	return getReal() < rhs.getReal();
+}
+
+bool Fraction::operator<=(const Fraction& rhs) const {
+	// On a juste besoin de bien définir < et == pour définir tous les autres.
+	return *this < rhs or *this == rhs;
+}
+
+bool Fraction::operator>(const Fraction& rhs) const {
+	return not (*this < rhs) and *this != rhs;
+}
+
+bool Fraction::operator>=(const Fraction& rhs) const {
+	return *this > rhs or *this == rhs;
+}
+
 Fraction& Fraction::operator+=(const Fraction& rhs) {
 	*this = *this + rhs;
 	return *this;

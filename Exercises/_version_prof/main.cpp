@@ -114,7 +114,8 @@ void runFractionExample() {
 	     << "bar        = " << bar << "\n"
 	     << "bar++      = " << bar++ << "\n"
 	     << "bar        = " << bar << "\n"
-	     << "++bar      = " << ++bar << "\n";
+	     << "++bar      = " << ++bar << "\n"
+	     << "foo >= bar = " << (foo >= bar) << "\n";
 }
 
 void runVectorExample() {
@@ -135,8 +136,8 @@ int main() {
 	//cout << "\n\n\n";
 	//runCompanyExample();
 	//cout << "\n\n\n";
-	//runFractionExample();
+	runFractionExample();
 	//cout << "\n\n\n";
-	runVectorExample();
+	//runVectorExample();
 }
 
